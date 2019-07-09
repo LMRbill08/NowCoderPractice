@@ -3,8 +3,9 @@ package practice;
 import java.util.ArrayList;
 
 /*
- * give the in-order and pre-order traversal of a tree
- * reconstruct the tree and return the in-order and pre-order of the tree  
+ * 1. give the in-order and pre-order traversal of a tree 
+ * 2. reconstruct the tree and return the in-order and pre-order of the tree 
+ * 3. check if a tree is the subtree (sub-structure) of another tree 
  */
 
 public class ReConstructBinaryTree {
@@ -18,14 +19,16 @@ public class ReConstructBinaryTree {
 		int[] pre = { 1, 2, 4, 7, 3, 5, 6, 8 };
 		int[] in = { 4, 7, 2, 1, 5, 3, 8, 6 };
 		TreeNode tree = reConstruct(pre, in);
-		
-		int[] subPre = {3, 5, 6};
-		int[] subIn = {5, 3, 6};
+
+		int[] subPre = { 3, 5, 6 };
+		int[] subIn = { 5, 3, 6 };
 		TreeNode subTree = reConstruct(subPre, subIn);
-		
-		boolean result = isSubTree(tree, subTree);
-		System.out.println(result);
-		
+
+		boolean isSubTree = isSubTree(tree, subTree);
+		boolean isSubStructure = isSubStructure(tree, subTree);
+		System.out.println("if Tree B is the subtree of Tree A: " + isSubTree);
+		System.out.println("if Tree B is the substructure of Tree A: " + isSubStructure);
+
 //		preOrderTraversal(tree);
 //		System.out.println(preList.toString());
 //		inOrderTraversal(tree);
@@ -47,6 +50,7 @@ public class ReConstructBinaryTree {
 		TreeNode tree = reConstructBinaryTree(pre, in, 0, preLen - 1, 0, inLen - 1);
 		return tree;
 	}
+
 	public static TreeNode reConstructBinaryTree(int[] pre, int[] in, int pStart, int pEnd, int iStart, int iEnd) {
 		TreeNode tree = new TreeNode(pre[pStart]);
 		tree.left = null;
@@ -70,10 +74,11 @@ public class ReConstructBinaryTree {
 	 * check if tree2 is the subtree of tree1
 	 */
 	public static boolean isSubTree(TreeNode tree1, TreeNode tree2) {
-		if (tree1 == null || tree2 == null)
+		if (tree1 == null || tree2 == null) // empty tree can't be the subtree of any other trees
 			return false;
 		boolean result = false;
-		if (tree1.val == tree2.val) {
+		if (tree1.val == tree2.val) { // if the two values are identical, then call checkSubTree to check their
+										// subtrees
 			result = checkSubTree(tree1, tree2);
 		}
 		if (!result) {
@@ -84,6 +89,7 @@ public class ReConstructBinaryTree {
 		}
 		return result;
 	}
+
 	public static boolean checkSubTree(TreeNode t1, TreeNode t2) {
 		// both tree1 and tree2 has finished checking at the last node
 		if (t1 == null && t2 == null) {
@@ -91,12 +97,47 @@ public class ReConstructBinaryTree {
 		} else if (t1 != null && t2 != null) { // if both tree1 and tree2 is not empty, then ...
 			if (t1.val != t2.val) { // if two values of tree1 and tree2 are different, then return false
 				return false;
-			} else { // if two values are identical, then check their left and right trees using recursion
+			} else { // if two values are identical, then check their left and right trees using
+						// recursion
 				return checkSubTree(t1.left, t2.left) && checkSubTree(t1.right, t2.right);
 			}
 		} else {
 			return false;
 		}
+	}
+
+	/*
+	 * check if tree2 is the sub-structure of tree1
+	 */
+	public static boolean isSubStructure(TreeNode t1, TreeNode t2) {
+		boolean result = false;
+		if (t1 == null || t2 == null)
+			return false;
+		if (t1.val == t2.val) {
+			result = checkSubStructure(t1, t2);
+		}
+		if (!result) {
+			result = isSubStructure(t1.left, t2);
+		}
+		if (!result) {
+			result = isSubStructure(t1.right, t2);
+		}
+		return result;
+	}
+
+	public static boolean checkSubStructure(TreeNode t1, TreeNode t2) {
+		if (t2 == null)
+			return true;
+		else if (t1 == null)
+			return false;
+		else if (t1 != null && t2 != null) {
+			if (t1.val != t2.val) {
+				return false;
+			} else {
+				return checkSubStructure(t1.left, t2.left) && checkSubStructure(t1.right, t2.right);
+			}
+		}
+		return false;
 	}
 
 	/*
