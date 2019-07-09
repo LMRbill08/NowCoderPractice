@@ -1,5 +1,9 @@
 package practice;
 
+/*
+ * given a LinkedList, return the reversed LinkedList of it  
+ */
+
 public class ReverseListNode {
 
 	public static void main(String[] args) {
@@ -12,6 +16,7 @@ public class ReverseListNode {
 		printListNode(result);
 	}
 
+	// reverse list node 
 	public static ListNode reverse(ListNode head) {
 		if (head == null) return null;
 		ListNode pre = null;
@@ -27,6 +32,26 @@ public class ReverseListNode {
 		return cur;		
 	}
 
+	/*
+	 *  reverse list node every 3 nodes each time. 
+	 *  for example: 1->2->3->4->5->6  => 3->2->1->6->5->4
+	 */
+	public static ListNode reverseEachThree(ListNode head) {
+		if (head == null) return null;
+		ListNode grpHead = head;
+		ListNode grpEnd = null;
+		
+		ListNode pre = null;
+		ListNode cur = head;
+		ListNode temp = null;
+		while(cur.val % 3 != 0) {
+			temp = cur.next;
+			
+		}
+		
+		return null;
+	}
+	
 	// initialize LinkList
 	public static void initListNode(int[] list, ListNode head) {
 		ListNode temp = head;

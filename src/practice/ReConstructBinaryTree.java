@@ -28,6 +28,10 @@ public class ReConstructBinaryTree {
 		boolean isSubStructure = isSubStructure(tree, subTree);
 		System.out.println("if Tree B is the subtree of Tree A: " + isSubTree);
 		System.out.println("if Tree B is the substructure of Tree A: " + isSubStructure);
+		
+		Mirror(tree);
+		preOrderTraversal(tree);
+		System.out.println(preList.toString());
 
 //		preOrderTraversal(tree);
 //		System.out.println(preList.toString());
@@ -138,6 +142,29 @@ public class ReConstructBinaryTree {
 			}
 		}
 		return false;
+	}
+
+	/*
+	 * given a Binary Tree, return its Mirror tree
+	 */
+	public static void Mirror(TreeNode tree) {
+		if (tree == null)
+			return;
+		if (tree.left != null && tree.right != null) {
+			TreeNode temp = tree.left;
+			tree.left = tree.right;
+			tree.right = temp;
+			Mirror(tree.left);
+			Mirror(tree.right);
+		} else if (tree.left != null) {
+			tree.right = tree.left;
+			tree.left = null;
+			Mirror(tree.right);
+		} else if (tree.right != null) {
+			tree.left = tree.right;
+			tree.right = null;
+			Mirror(tree.left);
+		}
 	}
 
 	/*
