@@ -1,6 +1,12 @@
 package practice;
 import java.util.*;
 
+/*
+ * given two lists, one list contains the elements whose order is the push order of a stack, 
+ * while another list contains the elements whose order is the pop order of the same stack. 
+ * check if the two lists are correct 
+ */
+
 public class PushAndPopList {
 
 	public static void main(String[] args) {
