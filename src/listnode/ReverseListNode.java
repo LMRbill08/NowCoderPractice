@@ -9,11 +9,6 @@ import java.util.Stack;
 public class ReverseListNode {
 	static Stack<ListNode> stackRevN = new Stack<ListNode>();
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	// reverse list node (normal method)
 	public static ListNode reverse(ListNode head) {
 		if (head == null)
@@ -105,7 +100,7 @@ public class ReverseListNode {
 	 * LinkedList. For example, 1->2->3->4, k = 3, the function returns 4; 1->2->3,
 	 * the function returns 3
 	 */
-	public static ListNode pushEveryN(ListNode head, int k) {
+	private static ListNode pushEveryN(ListNode head, int k) {
 		if (head == null)
 			return null;
 		ListNode temp = head;

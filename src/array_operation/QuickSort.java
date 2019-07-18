@@ -8,7 +8,7 @@ public class QuickSort {
 		return array;
 	}
 
-	public static void qSort(int[] array, int low, int high) {
+	private static void qSort(int[] array, int low, int high) {
 		int i = low;
 		int j = high;
 		int temp;
