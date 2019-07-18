@@ -1,4 +1,4 @@
-package practice;
+package other;
 /*
  * input: the number of steps that a man is going up, 
  * output: the number of different jumps that the person completed 

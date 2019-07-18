@@ -1,4 +1,4 @@
-package practice;
+package other;
 import java.util.Stack;
 
 public class ImplementQueueWithTwoStack {
