@@ -27,13 +27,42 @@ public class GetNumberOfK {
 			return -1;
 	}
 
-	private static int getFirst(int[] array, int target, int i, int j) {
+	// using while loop
+	private static int getFirst(int[] array, int target, int low, int high) {
 		// TODO Auto-generated method stub
-		return 0;
+		if (low > high) {
+			return -1;
+		}
+		int mid = (low + high) >> 1;
+		if (target < array[mid]) {
+			return getFirst(array, target, low, mid - 1);
+		} else if (target > array[mid]) {
+			return getFirst(array, target, mid + 1, high);
+		} else if (mid - 1 >= 0 && array[mid - 1] == target) {
+			return getFirst(array, target, low, mid - 1);
+		} else {
+			return mid;
+		}
 	}
 
-	private static int getLast(int[] array, int target, int i, int j) {
+	// using recursion
+	private static int getLast(int[] array, int target, int low, int high) {
 		// TODO Auto-generated method stub
-		return 0;
+		if (low > high)
+			return -1;
+		int mid = (low + high) >> 1;
+		while (low <= high) {
+			if (target < array[mid]) {
+				high = mid - 1;
+			} else if (target > array[mid]) {
+				low = mid + 1;
+			} else if (mid + 1 < array.length && array[mid + 1] == target) {
+				low = mid + 1;
+			} else {
+				return mid;
+			}
+			mid = (low + high) / 2;
+		}
+		return -1;
 	}
 }

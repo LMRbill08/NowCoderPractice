@@ -64,12 +64,11 @@ public class Main {
 		System.out.println();
 		System.out.println("===============Get Number of Target===============");
 		int[] arrayOfTarget = { 1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7 };
-		int targetNum = 51;
-		int timeOfTarget = GetNumberOfK.func1(arrayOfTarget, targetNum);
+		int targetNum = 5;
 		System.out.println("Array is: ");
 		print(arrayOfTarget);
+		int timeOfTarget = GetNumberOfK.func2(arrayOfTarget, targetNum);
 		System.out.println("Target is: " + targetNum + "\nOccur time is: " + timeOfTarget);
-
 	}
 
 	// print list
