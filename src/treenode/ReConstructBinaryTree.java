@@ -21,7 +21,7 @@ public class ReConstructBinaryTree {
 		return tree;
 	}
 
-	public static TreeNode reConstructBinaryTree1(int[] pre, int[] in, int pStart, int pEnd, int iStart, int iEnd) {
+	private static TreeNode reConstructBinaryTree1(int[] pre, int[] in, int pStart, int pEnd, int iStart, int iEnd) {
 		TreeNode tree = new TreeNode(pre[pStart]);
 		tree.left = null;
 		tree.right = null;
@@ -53,7 +53,7 @@ public class ReConstructBinaryTree {
 		return tree;
 	}
 
-	public static TreeNode reConstructBinaryTree2(int[] post, int[] in, int pStart, int pEnd, int iStart, int iEnd) {
+	private static TreeNode reConstructBinaryTree2(int[] post, int[] in, int pStart, int pEnd, int iStart, int iEnd) {
 		TreeNode tree = new TreeNode(post[pEnd]);
 		tree.left = null;
 		tree.right = null;

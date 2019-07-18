@@ -33,7 +33,7 @@ public class BinarySearchTree {
 		return result;
 	}
 
-	public static boolean isPost(int[] array, int start, int end, int val) {
+	private static boolean isPost(int[] array, int start, int end, int val) {
 		boolean cur = false;
 		boolean left = false;
 		boolean right = false;

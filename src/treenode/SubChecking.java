@@ -24,7 +24,7 @@ public class SubChecking {
 		return result;
 	}
 
-	public static boolean checkSubTree(TreeNode t1, TreeNode t2) {
+	private static boolean checkSubTree(TreeNode t1, TreeNode t2) {
 		// both tree1 and tree2 has finished checking at the last node
 		if (t1 == null && t2 == null) {
 			return true;
@@ -60,7 +60,7 @@ public class SubChecking {
 		return result;
 	}
 
-	public static boolean checkSubStructure(TreeNode t1, TreeNode t2) {
+	private static boolean checkSubStructure(TreeNode t1, TreeNode t2) {
 		if (t2 == null) {
 			return true;
 		} else if (t1 == null)
@@ -74,8 +74,8 @@ public class SubChecking {
 		}
 		return false;
 	}
-	
-	// check if a tree is a balanced-tree 
+
+	// check if a tree is a balanced-tree
 	public static boolean isBalanced(TreeNode tree) {
 		if (tree == null) {
 			return true;
@@ -83,7 +83,9 @@ public class SubChecking {
 		int leftLen = Traversal.TreeDepth(tree.left);
 		int rightLen = Traversal.TreeDepth(tree.right);
 		int diff = Math.abs(leftLen - rightLen);
-		if (diff <= 1) return true; 
-		else return false;
+		if (diff <= 1)
+			return true;
+		else
+			return false;
 	}
 }
