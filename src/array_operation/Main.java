@@ -44,12 +44,12 @@ public class Main {
 		System.out.println(leastKList.toString());
 		System.out.println();
 		System.out.println("===============Find Greatest Sum Of Sub Array===============");
-		int[] maxSubArray = {6, -3, -2, 7, -15, 1, 2, 20};
+		int[] maxSubArray = { 6, -3, -2, 7, -15, 1, 2, 20 };
 		print(maxSubArray);
 		System.out.println("greatest sum of sub array is: " + FindGreatestSumOfSubArray.function(maxSubArray));
 		System.out.println();
 		System.out.println("===============Print Min Number===============");
-		int[] minNumber = {3, 32, 321};
+		int[] minNumber = { 3, 32, 321 };
 		print(minNumber);
 		System.out.println("min number is: " + PrintMinNumber.function(minNumber));
 		System.out.println();
@@ -61,6 +61,15 @@ public class Main {
 		System.out.println();
 		System.out.println("===============Get Nth ugly number===============");
 		System.out.println(UglyNumber.function(7));
+		System.out.println();
+		System.out.println("===============Get Number of Target===============");
+		int[] arrayOfTarget = { 1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7 };
+		int targetNum = 51;
+		int timeOfTarget = GetNumberOfK.func1(arrayOfTarget, targetNum);
+		System.out.println("Array is: ");
+		print(arrayOfTarget);
+		System.out.println("Target is: " + targetNum + "\nOccur time is: " + timeOfTarget);
+
 	}
 
 	// print list
