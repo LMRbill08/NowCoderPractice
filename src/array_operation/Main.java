@@ -1,6 +1,7 @@
 package array_operation;
 
 import java.util.*;
+import java.util.function.IntPredicate;
 
 public class Main {
 
@@ -35,7 +36,7 @@ public class Main {
 		int resNumber = MoreThanHalfNum.func1(arrayHalf);
 		System.out.println(resNumber);
 		System.out.println();
-		System.out.println("===============Find Least K Numbers===============");
+		System.out.println("===============Find the Least K Numbers===============");
 		int[] leastK = { 5, 8, 2, 3, 7, 6, 9, 1, 4 };
 		print(leastK);
 		int K = 5;
@@ -48,7 +49,7 @@ public class Main {
 		print(maxSubArray);
 		System.out.println("greatest sum of sub array is: " + FindGreatestSumOfSubArray.function(maxSubArray));
 		System.out.println();
-		System.out.println("===============Print Min Number===============");
+		System.out.println("===============Print the Minest Number===============");
 		int[] minNumber = { 3, 32, 321 };
 		print(minNumber);
 		System.out.println("min number is: " + PrintMinNumber.function(minNumber));
@@ -59,16 +60,25 @@ public class Main {
 		int firstChar = FirstNotRepeatingChar.func2(firstSingleOccurChar);
 		System.out.println("Index of first not repeating char is: " + firstChar);
 		System.out.println();
-		System.out.println("===============Get Nth ugly number===============");
+		System.out.println("===============Get the Nth ugly number===============");
 		System.out.println(UglyNumber.function(7));
 		System.out.println();
-		System.out.println("===============Get Number of Target===============");
+		System.out.println("===============Get Occur Times of Target===============");
 		int[] arrayOfTarget = { 1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7 };
 		int targetNum = 5;
 		System.out.println("Array is: ");
 		print(arrayOfTarget);
 		int timeOfTarget = GetNumberOfK.func2(arrayOfTarget, targetNum);
 		System.out.println("Target is: " + targetNum + "\nOccur time is: " + timeOfTarget);
+		System.out.println();
+		System.out.println("===============Find the Numbers Occur Once===============");
+		int[] findOccurOnece = { 1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 8, 6, 7, 8 };
+		int[] num1 = new int[1];
+		int[] num2 = new int[1];
+		System.out.println("current array is: ");
+		print(findOccurOnece);
+		FindNumsAppearOnce.function(findOccurOnece, num1, num2);
+		System.out.println("The 2 numbers are: " + num1[0] + " " + num2[0]);
 	}
 
 	// print list
