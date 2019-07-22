@@ -79,6 +79,15 @@ public class Main {
 		print(findOccurOnece);
 		FindNumsAppearOnce.function(findOccurOnece, num1, num2);
 		System.out.println("The 2 numbers are: " + num1[0] + " " + num2[0]);
+		System.out.println();
+		System.out.println("===============Find Continuous Sequence===============");
+		System.out.println();
+		System.out.println("===============Left Rotate String===============");
+		String leftRotateStr = "abcdefg";
+		int rotateBit = 3;
+		System.out.println("String is: " + leftRotateStr);
+		System.out.println("Rotate Bit is: " + rotateBit);
+		System.out.println("Result is: " + LeftRotateString.function(leftRotateStr, rotateBit));
 	}
 
 	// print list
