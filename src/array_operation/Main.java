@@ -16,6 +16,7 @@ public class Main {
 		// boolean result = findFromBottomLeft(target, arr);
 		System.out.println("\nif target in array: " + result);
 		System.out.println();
+		
 		System.out.println("===============Divid Odd And Even Number In Array===============");
 		int[] list = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		DividOddAndEvenNumberInArray.reOrderArray2(list);
@@ -23,6 +24,7 @@ public class Main {
 		int[] res = DividOddAndEvenNumberInArray.reOrderArray1(list);
 		print(res);
 		System.out.println();
+		
 		System.out.println("===============Clockwise Print Matrix===============\n");
 		int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
 		// int[][] matrix = { { 1, 2, 3, 4 }};
@@ -30,12 +32,14 @@ public class Main {
 		ArrayList<Integer> clockwiseList = clockwisePrintMatrix(matrix);
 		System.out.println(clockwiseList.toString());
 		System.out.println();
+		
 		System.out.println("===============Find The More Than Half Number===============");
 		int[] arrayHalf = { 1, 2, 3, 2, 2, 2, 5, 4, 2 };
 		print(arrayHalf);
 		int resNumber = MoreThanHalfNum.func1(arrayHalf);
 		System.out.println(resNumber);
 		System.out.println();
+		
 		System.out.println("===============Find the Least K Numbers===============");
 		int[] leastK = { 5, 8, 2, 3, 7, 6, 9, 1, 4 };
 		print(leastK);
@@ -44,25 +48,30 @@ public class Main {
 		ArrayList<Integer> leastKList = FindLeastK.func2(leastK, K);
 		System.out.println(leastKList.toString());
 		System.out.println();
+		
 		System.out.println("===============Find Greatest Sum Of Sub Array===============");
 		int[] maxSubArray = { 6, -3, -2, 7, -15, 1, 2, 20 };
 		print(maxSubArray);
 		System.out.println("greatest sum of sub array is: " + FindGreatestSumOfSubArray.function(maxSubArray));
 		System.out.println();
+		
 		System.out.println("===============Print the Minest Number===============");
 		int[] minNumber = { 3, 32, 321 };
 		print(minNumber);
 		System.out.println("min number is: " + PrintMinNumber.function(minNumber));
 		System.out.println();
+		
 		System.out.println("===============Print The First Not Repeating Char in String===============");
 		String firstSingleOccurChar = "google";
 		System.out.println("String is: " + firstSingleOccurChar);
 		int firstChar = FirstNotRepeatingChar.func2(firstSingleOccurChar);
 		System.out.println("Index of first not repeating char is: " + firstChar);
 		System.out.println();
+		
 		System.out.println("===============Get the Nth ugly number===============");
 		System.out.println(UglyNumber.function(7));
 		System.out.println();
+		
 		System.out.println("===============Get Occur Times of Target===============");
 		int[] arrayOfTarget = { 1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7 };
 		int targetNum = 5;
@@ -71,6 +80,7 @@ public class Main {
 		int timeOfTarget = GetNumberOfK.func2(arrayOfTarget, targetNum);
 		System.out.println("Target is: " + targetNum + "\nOccur time is: " + timeOfTarget);
 		System.out.println();
+		
 		System.out.println("===============Find the Numbers Occur Once===============");
 		int[] findOccurOnece = { 1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 8, 6, 7, 8 };
 		int[] num1 = new int[1];
@@ -80,8 +90,10 @@ public class Main {
 		FindNumsAppearOnce.function(findOccurOnece, num1, num2);
 		System.out.println("The 2 numbers are: " + num1[0] + " " + num2[0]);
 		System.out.println();
+		
 		System.out.println("===============Find Continuous Sequence===============");
 		System.out.println();
+		
 		System.out.println("===============Left Rotate String===============");
 		String leftRotateStr = "abcdefg";
 		int rotateBit = 3;

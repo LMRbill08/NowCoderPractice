@@ -56,6 +56,15 @@ public class Main {
 		printListNode(headK);
 		ListNode res2 = FindKFromTailOfLinkList.findKFromTail(K, headK);
 		System.out.println("\n\ntarget is: " + res2.val);
+		System.out.println("");
+
+		System.out.println("==============Delete Duplicated Nodes==============");
+		int[] deleteDupList = { 1, 2, 3, 4, 4, 4, 5, 5, 6, 7, 8, 8, 9 };
+		ListNode deleteDup = new ListNode(deleteDupList[0]);
+		initListNode(deleteDupList, deleteDup);
+		printListNode(deleteDup);
+		ListNode res = DeleteDuplication.function(deleteDup);
+		printListNode(res);
 	}
 
 	public static void initListNode(int[] list, ListNode head) {
