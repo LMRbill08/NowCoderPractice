@@ -3,6 +3,9 @@ package array_operation;
 import java.util.*;
 import java.util.function.IntPredicate;
 
+import str_operation.FirstNotRepeatingChar;
+import str_operation.LeftRotateString;
+
 public class Main {
 
 	public static void main(String[] args) {

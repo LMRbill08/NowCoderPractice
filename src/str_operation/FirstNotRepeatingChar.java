@@ -1,4 +1,4 @@
-package array_operation;
+package str_operation;
 
 import java.util.HashMap;
 

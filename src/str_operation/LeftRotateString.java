@@ -1,4 +1,4 @@
-package array_operation;
+package str_operation;
 
 public class LeftRotateString {
 	public static String function(String str, int n) {
