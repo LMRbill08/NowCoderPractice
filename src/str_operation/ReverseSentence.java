@@ -14,6 +14,5 @@ public class ReverseSentence {
 			}
 		}
 		return sBuilder.toString();
-		
 	}
 }
