@@ -4,7 +4,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println("===============Replace Space to \"%20\"===============");
+		String strReplaceSpaceString = "Hello, this is Bill!";
+		System.out.println("String is: " + strReplaceSpaceString);
+		System.out.println("New String is: " + SpaceReplacement.replaceSpace(new StringBuffer(strReplaceSpaceString)));
+		System.out.println();
+		
 		System.out.println("===============Print The First Not Repeating Char in String===============");
 		String firstSingleOccurChar = "google";
 		System.out.println("String is: " + firstSingleOccurChar);

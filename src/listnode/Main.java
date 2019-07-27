@@ -45,7 +45,7 @@ public class Main {
 		ListNode head3 = new ListNode(arr[0]);
 		initListNode(arr, head3);
 		printListNode(head3);
-		PrintListNodeFromTailToHead.function3(head3);
+		PrintListNodeFromTailToHead.function2(head3);
 		System.out.println(PrintListNodeFromTailToHead.list1.toString() + "\n");
 
 		System.out.println("==========Find Kth Node From Tail==========");
