@@ -20,6 +20,13 @@ public class Main {
 		System.out.println("\nif target in array: " + result);
 		System.out.println();
 
+		System.out.println("============Find Min Number in Rotate Array============");
+		int[] rotateArr = { 6, 7, 8, 9, 2, 3, 4, 5 };
+		System.out.println("Rotate Array is: ");
+		print(rotateArr);
+		System.out.println("Min Number is: " + MinNumberInRotateArray.function2(rotateArr));
+		System.out.println();
+
 		System.out.println("===============Divid Odd And Even Number In Array===============");
 		int[] list = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		DividOddAndEvenNumberInArray.reOrderArray2(list);
