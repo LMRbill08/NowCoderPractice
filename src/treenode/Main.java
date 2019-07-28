@@ -15,6 +15,7 @@ public class Main {
 		int[] in = { 4, 7, 2, 1, 5, 3, 8, 6 };
 		int[] post = { 7, 4, 2, 5, 8, 6, 3, 1 };
 		TreeNode tree1 = ReConstructBinaryTree.reConstruct1(pre, in);
+		System.out.println("The level-order Traversal of tree1: " + Traversal.PrintFromTopToBottom(tree1).toString());
 		TreeNode tree2 = ReConstructBinaryTree.reConstruct2(post, in);
 		System.out.println("The depth of tree is: " + Traversal.TreeDepth(tree1));
 		System.out.println("If the tree is a balanced tree: " + SubChecking.isBalanced(tree1));

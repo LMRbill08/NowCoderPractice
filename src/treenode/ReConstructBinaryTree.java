@@ -25,7 +25,7 @@ public class ReConstructBinaryTree {
 		TreeNode tree = new TreeNode(pre[pStart]);
 		tree.left = null;
 		tree.right = null;
-		int root = 0;
+		int root = iStart;
 		while (root <= iEnd && in[root] != pre[pStart]) {
 			root++;
 		}
