@@ -23,6 +23,7 @@ public class Main {
 				"If the two trees are equal with structure and values: " + SubChecking.isSubTree(tree1, tree2));
 		System.out.println("===============================================");
 		System.out.println();
+
 		System.out.println("===========creating and checking a BST=========");
 		int[] bstPre = { 5, 3, 2, 1, 4, 8, 6, 7, 10, 9 };
 		int[] bstIn = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -34,11 +35,13 @@ public class Main {
 		System.out.println("Level-order Traversal: " + levelList.toString());
 		System.out.println("===============================================");
 		System.out.println();
+
 		System.out.println("check if the array is post-order traversal of a BST");
 		System.out.println(BinarySearchTree.isPostOfBST(bstPost));
 		System.out.println(BinarySearchTree.isPostOfBST(post));
 		System.out.println("===============================================");
 		System.out.println();
+
 		System.out.println("=====check if it's subtree or substructure=====");
 		int[] subPre = { 3, 5, 6 };
 		int[] subIn = { 5, 3, 6 };
@@ -49,6 +52,7 @@ public class Main {
 		System.out.println("if Tree B is the substructure of Tree A: " + isSubStructure);
 		System.out.println("===============================================");
 		System.out.println();
+
 		System.out.println("===gives all paths that equals to the number===");
 		int[] pathPre = { 1, 2, 7, 3, 6 };
 		int[] pathIn = { 2, 7, 1, 3, 6 };
