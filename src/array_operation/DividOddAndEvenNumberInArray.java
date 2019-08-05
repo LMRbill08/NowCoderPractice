@@ -1,8 +1,9 @@
 package array_operation;
+
 /*
  * divide an array into 2 parts, the front part of the array contains all the odd numbers in the original array, 
  * while the end part contains all the even numbers 
- * the relative location between numbers do not change 
+ * the relative position between numbers do not change 
  */
 public class DividOddAndEvenNumberInArray {
 
@@ -19,11 +20,10 @@ public class DividOddAndEvenNumberInArray {
 		}
 		for (int i = 0; i < len; i++) {
 			if (array[i] % 2 == 0) {
-				temp [cur_index] = array[i];
+				temp[cur_index] = array[i];
 				cur_index++;
 			}
 		}
-
 		return temp;
 	}
 
@@ -51,6 +51,5 @@ public class DividOddAndEvenNumberInArray {
 			array[odd_index + i] = even_list[i];
 		}
 	}
-
 
 }
