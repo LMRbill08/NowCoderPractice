@@ -1,5 +1,7 @@
 package array_operation;
 
+import java.util.Arrays;
+
 public class MoreThanHalfNum {
 
 	/*
@@ -54,7 +56,7 @@ public class MoreThanHalfNum {
 		} else if (len == 1) {
 			return array[0];
 		} else {
-			QuickSort.quickSort(array);
+			Arrays.sort(array);
 			return array[len / 2];
 		}
 	}
