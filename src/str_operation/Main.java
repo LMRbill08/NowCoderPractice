@@ -4,6 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("nothing");
 		System.out.println("===============Replace Space to \"%20\"===============");
 		String strReplaceSpaceString = "Hello, this is Bill!";
 		System.out.println("String is: " + strReplaceSpaceString);
